@@ -7,7 +7,7 @@ About
 jQuery Write is simple WYSIWYG html editor. If you are looking for a
 feature-filled editor, please see [TinyMCE][tinymce] or [CKEditor][ckeditor].
 
-**This is not a 1.0.0 release.**
+**This is not a 1.0.0 release.** All intended features are not implemented yet.
 
 Install
 -----
@@ -41,21 +41,21 @@ Example:
 Options:
 
 * gui: An object which stores various settings pertaining to the UI.
-* * classes: An object which maps toolbar items to their appropriate classes.
-* * * toolbar: The class name for the toolbar that wraps all the toolbar buttons
-* * * resize: Reserved. This feature not yet implemented.
-* * * selected: Reserved. This feature not yet implemented.
-* * * bold, italic, strike, ordered, unordered, link, image, html: each property
-    sets a corresponding toolbar button to a specific class
-* * html: An object which maps toolbar items to their appropriate innerHTML.
-* * * bold, italic, strike, ordered, unordered, link, image, html: each property
-    sets a corresponding toolbar button to a specific innerHTML value.
-* * argHandler: Some toolbar buttons require extra input, their appropriate functions
-   are stored here. Functions accept 3 arguments: the iframe editor they're acting
-   upon, the current options set for the editor, and a callback function that can
-   be passed the value. Returning a logically true value is equivalent to passing the
-   callback function the value. Using the callback function allows delayed processing
-   of a toolbar's function (ie - show an HTML-based dialog instead of confirm).
+  * classes: An object which maps toolbar items to their appropriate classes.
+     * toolbar: The class name for the toolbar that wraps all the toolbar buttons
+     * resize: Reserved. This feature not yet implemented.
+     * selected: Reserved. This feature not yet implemented.
+     * bold, italic, strike, ordered, unordered, link, image, html: each property
+       sets a corresponding toolbar button to a specific class
+  * html: An object which maps toolbar items to their appropriate innerHTML.
+     * bold, italic, strike, ordered, unordered, link, image, html: each property
+       sets a corresponding toolbar button to a specific innerHTML value.
+  * argHandler: Some toolbar buttons require extra input, their appropriate functions
+    are stored here. Functions accept 3 arguments: the iframe editor they're acting
+    upon, the current options set for the editor, and a callback function that can
+    be passed the value. Returning a logically true value is equivalent to passing the
+    callback function the value. Using the callback function allows delayed processing
+    of a toolbar's function (ie - show an HTML-based dialog instead of confirm).
 * bodyCSS: An object of all the CSS attributes that the text editing area should have.
   The style is independent of whatever styles the site has since it is inside an
   iframe.
@@ -63,8 +63,8 @@ Options:
 * enabled: Reserved. This feature is not yet implemented.
 * toolbar: An array of strings for the toolbar items to use.
 * classes: An object of classes to use for iframe and div wrapper.
-* * iframe: The class for the iframe
-* * container: The class for the div wrapper that wraps all the editor components.
+  * iframe: The class for the iframe
+  * container: The class for the div wrapper that wraps all the editor components.
 * exclusiveSelect: A boolean.
 * resizable: Reserved. This feature is not yet implemented.
 * singleLined: A selector. The selector is used to determine what elements should be
