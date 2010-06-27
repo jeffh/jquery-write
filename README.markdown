@@ -83,6 +83,7 @@ List of things needed to get done.
 * Better dialog support
 * Enable/disabling the editor
 * User-resizable editor
+* Events support (like regular input fields)
 
 Authors
 -----
