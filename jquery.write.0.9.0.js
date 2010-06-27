@@ -1,5 +1,8 @@
 /* jquery.write.1.0.0.js
- * 
+ * by Jeff Hui (contrib@jeffhui.net)
+ *
+ * MIT Licensed:
+ * http://www.opensource.org/licenses/mit-license.php
  */
 (function($){
 // stores the last editor iframe we accessed
@@ -326,59 +329,6 @@ $.each({
 /*
  * Creates a wysiwyg write for the selected fields. The original
  * fields are hidden and iframes are appended.
- * 
- * Parameters:
- *  options: an object containing optional parameters
- * 
- * Options:
- *  enabled: a boolean value. Set to false to disable the editor for this object.
- *  toolbar: a list. A list of string and functions that make up the wysiwyg toolbar.
- *           Strings should match a predefined list of names (see below). A function
- *           that accepts (toolbar, iframe, options) arguments that will attach itself
- *           to the toolbar (via append) and any other configuration needed.
- * 
- *           Defaults to [bold, italic, strike, ordered, unorderd, link, image] string
- *           values.
- *  stylesheet: the stylesheet the iframe gets. A false value attaches no
- *              stylesheet. Defaults to 'jwrite.css'.
- *  className: the className the iframe gets. It should be used to uniquely
- *             identify editor iframes. Defaults to 'jwriteEditor'.
- *  exclusiveSelect: a boolean value. True deselects all text from editor iframes
- *                   when this editor iframe gains focus. This prevents the user
- *                   from becoming confused with multiple text selections.
- *                   Defaults to true.
- *  resizable: a boolean value. If enabled, a dragging handle is displays in the bottom
- *             right corner to allow the user to resize the window. Defaults to true.
- *  singleLined: a css selector. A selector that determines which elements should have
- *               only single-lined editing mode. Set to false to force multi-line
- *               editing for every element or true to force single-line mode.
- *  bodyCSS: an object. The css values set directly to the iframe's document.body.
- *           Default values sets the margin & padding to values more acceptable to a
- *           text input field.
- *  attr: an object. The html attributes to set to the iframe. Default values remove
- *        default iframe cruft.
- *  gui: an object. Contains settings relating to the formatting buttons
- *   builder: a function(iframe, options). A function that handles the creation of the
- *            toolbar. It should be placed as a sibling of the iframe.
- *   addButton: a function(name, toolbar, iframe, options). A function that handles the
- *              creation of a toolbutton given a string of the button. Defaults to one
- *              that accepts some basic formatting options (eg - 'bold', 'italic', etc.).
- * 
- *              The default addButton function utilizes the other gui settings to assist
- *              in creating the toolbuttons.
- *   classes: an object. The classes used in the toolbar. Besides toolbar, most consist of
- *            the name mapped to a class name.
- *   html: an object. Identical to the classes setting, but provides innerHTML values.
- *   argHandle: an object. Identical to classes settings, but provides functions that return
- *              a value for the associated command (eg - url for 'link' command). The functions
- *              should accept (iframe, options, callback).
- * 
- *              Callback is the caller function, which is the command waiting for an argument.
- *              This can be used for delayed invokation (ie - show a dialog before calling).
- * 
- * 
- * Returns:
- *  the original jQuery object.
  */
 $.fn.editable = function(options){
     options = $.extend(true, {}, $.editable.options, options);
