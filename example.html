@@ -1,0 +1,56 @@
+<!doctype HTML>
+<html lang="en">
+  <head>
+    <title>Fabious - A WYSIWYG Editor</title>
+    <style type="text/css">
+      .jwriteEditor {
+	  padding:0;
+	  margin: 0.4em 0;
+	  border: 1px solid grey;
+	  overflow: hidden;
+      }
+      .jwriteToolbar a {
+	  font-size: 13px;
+	  margin: 0;
+	  margin-right: 0.20em;
+	  padding: 0.25em 0.5em;
+	  text-decoration: none;
+	  color: #333;
+	  background: #eee;
+	  border: 1px solid #aaa;
+	  border-radius: 4px;
+	  -moz-border-radius: 4px;
+	  -webkit-border-radius: 4px;
+      }
+      .jwriteToolbar a:hover {
+	  background: #333;
+	  color: #eee;
+      }
+      .jwriteToolbar .bold { font-weight: bold; }
+      .jwriteToolbar .italic { font-style: italic; }
+      .jwriteToolbar .strike { text-decoration: line-through; }
+      .jwriteToolbar .link { text-decoration: underline; }
+    </style>
+  </head>
+  <body>
+    <a href="http://google.com">Leave Page</a>
+    <form action="" method="post">
+      <p>WYSIWYG input fields</p>
+      <p><input type="text" class="editor" name="title" value="hello" /></p>
+      <p class="editor">Paragraph</p>
+      <p><input type="text" class="editor" name="title" value="" /></p>
+      <p><textarea name="body" class="editor"></textarea></p>
+      <p>Plain input fields</p>
+      <p><input type="text" name="title" value="" /></p>
+      <p><textarea name="body"></textarea></p>
+    </form>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
+    <script src="jquery.write.0.9.0.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $('.editor').editable(true);
+      $('#bold').click($.editable.commands.bold).attr('selectable', 'off');
+      $('#strike').click($.editable.commands.strike).attr('selectable', 'off');
+      </script>
+  </body>
+</html>
